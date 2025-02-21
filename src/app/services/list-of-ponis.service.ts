@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class ListOfPonisService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  getPonys(){
+    return this.http.get('https://ponyapi.net/v1/character/all');
+  }
 }

@@ -7,7 +7,6 @@ export const routes: Routes = [
     {path:'home', component: HomeComponent},
     {path:'formulario', component: FormularioComponent},
     {path:'listOfPonis', component: ListOfPonisComponent },
-
     {path:'**', redirectTo:'home'}
 
 ];
