@@ -1,39 +1,36 @@
 <div class="container">
-  <h2>Adivina qué Personaje de My Little Pony eres</h2>
+  <h2>🌈 ¡Descubre qué Pony de Equestria eres! 🦄</h2>
   
   <form [formGroup]="formulario" (ngSubmit)="adivinarPersonaje()">
     
     <div>
-      <label for="colorFavorito">¿Cuál es tu color favorito?</label>
+      <label for="colorFavorito">🎨 ¿Cuál es tu color favorito?</label>
       <input id="colorFavorito" formControlName="colorFavorito" type="text" />
-      @if (formulario.get('colorFavorito')?.invalid && formulario.get('colorFavorito')?.touched) {
-        <small class="error">Este campo es obligatorio.</small>
-      }
+      <small class="error" [hidden]="!(formulario.get('colorFavorito')?.invalid && formulario.get('colorFavorito')?.touched)">
+        🌟 Este campo es obligatorio.
+      </small>
     </div>
 
     <div>
-      <label for="fruta">¿Qué fruta te gusta más?</label>
+      <label for="fruta">🍎 ¿Qué fruta te gusta más?</label>
       <input id="fruta" formControlName="fruta" type="text" />
-      @if (formulario.get('fruta')?.invalid && formulario.get('fruta')?.touched) {
-        <small class="error">Este campo es obligatorio.</small>
-      }
+      <small class="error" [hidden]="!(formulario.get('fruta')?.invalid && formulario.get('fruta')?.touched)">
+        🌟 Este campo es obligatorio.
+      </small>
     </div>
 
     <div>
-      <label for="habilidad">¿Cómo te describes según las opciones?</label>
+      <label for="habilidad">✨ ¿Cómo te describes según las opciones?</label>
       <input id="habilidad" formControlName="habilidad" type="text" />
-      @if (formulario.get('habilidad')?.invalid && formulario.get('habilidad')?.touched) {
-        <small class="error">Este campo es obligatorio.</small>
-      }
+      <small class="error" [hidden]="!(formulario.get('habilidad')?.invalid && formulario.get('habilidad')?.touched)">
+        🌟 Este campo es obligatorio.
+      </small>
     </div>
 
-    <button type="submit" [disabled]="formulario.invalid">Adivinar</button>
+    <button type="submit" [disabled]="formulario.invalid">🌟 Adivinar 🦄</button>
   </form>
 
-  <!-- Mostrar el resultado -->
-  @if (resultado) {
-    <div>
-      <h3>{{ resultado }}</h3>
-    </div>
-  }
+  <div [hidden]="!mostrarResultado">
+    <h3>🎉 {{ resultado }} 🎠</h3>
+  </div>
 </div>

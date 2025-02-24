@@ -1,29 +1,46 @@
+/* Fondo inspirado en My Little Pony */
+body {
+  background: linear-gradient(to bottom, #ffccff, #ccddff);
+  font-family: 'Patrick Hand', cursive;
+  color: #5a009d;
+}
+
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  input {
-    width: 80%;
-    padding: 8px;
-    margin: 10px 0;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-  }
-  
-  h3 {
-    color: #007bff;
-  }
-  
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 2px solid #ff66b2;
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(to right, #ff66b2, #ffccff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ffccff, #ff66b2);
+}
+
+h3 {
+  color: #ff66b2;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
